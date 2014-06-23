@@ -5,6 +5,7 @@ git checkout gh-pages
 git pull
 rm -rf publish/*
 cp -R dist/* publish/
-git add -A publish
+git add -A publish/
 git commit -m "Published '$CURRENTCOMMITMESSAGE'."
+git push origin gh-pages
 git checkout $CURRENTBRANCH
