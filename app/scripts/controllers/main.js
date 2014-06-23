@@ -8,7 +8,7 @@
  * Controller of the angulartestApp
  */
 angular.module('angulartestApp')
-  .controller('MainCtrl', function ($scope, $http) {
+  .controller('MainCtrl', function ($scope, $http, $location) {
 
     $scope.selected = undefined;
 
@@ -22,10 +22,17 @@ angular.module('angulartestApp')
       }).then(function(res){
         var addresses = [];
         angular.forEach(res.data.results, function(item){
-          addresses.push(item.name);
+          addresses.push(item);
         });
         return addresses;
       });
     };
+
+    $scope.onSelect = function($item, $model, $label) {
+      var actorId = $item.id;
+      var actorName = $item.name;
+
+      $location.path('/actor/' + actorId + '/' + actorName);
+    }
 
   });
