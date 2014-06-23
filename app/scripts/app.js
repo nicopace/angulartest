@@ -12,6 +12,7 @@ angular
   .module('angulartestApp', [
     'ngResource',
     'ui.bootstrap',
+    'ngGrid',
     'ngRoute'
   ])
   .config(function ($routeProvider) {
@@ -20,7 +21,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/actor/:actorId', {
+      .when('/actor/:actorId/:actorName', {
         templateUrl: 'views/actor.html',
         controller: 'ActorCtrl'
       })
