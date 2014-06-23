@@ -27,6 +27,9 @@ Prerequisites
 - Get [Node.js][node-download].
 - Install the tool dependencies (`npm install`)
 
+### Ruby and Compass
+
+- Get [Ruby] and [Compass] (gem install compass).
 
 Installing dependencies
 -----------------------
@@ -43,6 +46,10 @@ tutorial.
 
 Most of the scripts described below will run this automatically but it doesn't do any harm to run
 it whenever you like.
+
+```
+bower update
+```
 
 Running the app during development
 ----------------------------------
