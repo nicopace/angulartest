@@ -21,7 +21,7 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/actor/:actorId', {
+      .when('/actor/:actorId/:actorName', {
         templateUrl: 'views/actor.html',
         controller: 'ActorCtrl'
       })
