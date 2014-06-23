@@ -28,11 +28,11 @@ angular.module('angulartestApp')
       });
     };
 
-    $scope.onSelect = function($item, $model, $label) {
+    $scope.onSelect = function($item) {
       var actorId = $item.id;
       var actorName = $item.name;
 
       $location.path('/actor/' + actorId + '/' + actorName);
-    }
+    };
 
   });
