@@ -12,6 +12,7 @@ angular
   .module('angulartestApp', [
     'ngResource',
     'ui.bootstrap',
+    'ngGrid',
     'ngRoute'
   ])
   .config(function ($routeProvider) {
