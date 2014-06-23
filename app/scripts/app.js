@@ -11,6 +11,7 @@
 angular
   .module('angulartestApp', [
     'ngResource',
+    'ui.bootstrap',
     'ngRoute'
   ])
   .config(function ($routeProvider) {
@@ -19,9 +20,9 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/actor/:actorId', {
+        templateUrl: 'views/actor.html',
+        controller: 'ActorCtrl'
       })
       .otherwise({
         redirectTo: '/'
